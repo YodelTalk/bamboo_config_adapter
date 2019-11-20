@@ -59,6 +59,10 @@ defmodule Bamboo.ConfigAdapter do
     |> chained_adapter.deliver(final_config)
   end
 
+  def supports_attachments?() do
+    true
+  end
+
   def handle_config(%{chained_adapter: _} = config) do
     config
   end
